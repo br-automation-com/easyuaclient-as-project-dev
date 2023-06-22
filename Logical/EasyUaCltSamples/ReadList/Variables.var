@@ -1,0 +1,8 @@
+VAR
+	VarC : INT;
+	VarB : INT;
+	VarA : INT;
+	EasyUaReadList_0 : EasyUaReadList;
+	NodeErrorIDs_0 : ARRAY[0..MAX_INDEX_NODELIST] OF DWORD;
+	TimeStamps_0 : ARRAY[0..MAX_INDEX_NODELIST] OF DATE_AND_TIME;
+END_VAR

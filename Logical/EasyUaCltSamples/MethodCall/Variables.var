@@ -1,0 +1,6 @@
+VAR
+	VarC : REAL;
+	VarB : REAL;
+	VarA : REAL;
+	EasyUaMethodCall_0 : EasyUaMethodCall;
+END_VAR

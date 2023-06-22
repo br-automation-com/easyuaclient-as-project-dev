@@ -1,0 +1,4 @@
+VAR
+	EasyUaRead_0 : EasyUaRead;
+	VarA : INT;
+END_VAR

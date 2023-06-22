@@ -1,0 +1,7 @@
+VAR
+	VarC : INT;
+	VarB : INT;
+	VarA : INT;
+	EasyUaWriteList_0 : EasyUaWriteList;
+	NodeErrorIDs_0 : ARRAY[0..MAX_INDEX_NODELIST] OF DWORD;
+END_VAR

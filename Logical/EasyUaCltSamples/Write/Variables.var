@@ -1,0 +1,4 @@
+VAR
+	EasyUaWrite_0 : EasyUaWrite;
+	VarA : INT;
+END_VAR

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Programs of Library Help-->
+<DocumentationStudio Version="1.3.0.0">
+  <Programs />
+  <Settings>
+    <Generates>true</Generates>
+    <Order>4</Order>
+    <AlwaysLast>true</AlwaysLast>
+    <ReplaceTabulatorWithSpaces>true</ReplaceTabulatorWithSpaces>
+    <SpacesPerTabulator>1</SpacesPerTabulator>
+  </Settings>
+</DocumentationStudio>

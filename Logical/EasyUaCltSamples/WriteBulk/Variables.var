@@ -1,0 +1,9 @@
+VAR
+	VarC : INT;
+	VarB : INT;
+	VarA : INT;
+	EasyUaWriteBulk_0 : EasyUaWriteBulk;
+	NodeIDs_0 : ARRAY[0..2] OF UANodeID;
+	Variables_0 : ARRAY[0..2] OF STRING[255];
+	NodeErrorIDs_0 : ARRAY[0..2] OF DWORD;
+END_VAR

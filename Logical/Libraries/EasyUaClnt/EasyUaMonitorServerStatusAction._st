@@ -1,0 +1,77 @@
+ACTION EasyUaMonitorServerStatus_CheckParameters:
+	IF MonitoringTime = 0 THEN
+		Internal.MonitoringTime := T#10s;
+	ELSE
+		Internal.MonitoringTime := MonitoringTime;
+	END_IF;
+	Active := TRUE;
+	Error := FALSE; 
+	StatusID := 0;		
+	Internal.ParametersValid := TRUE;	
+END_ACTION
+
+ACTION EasyUaMonitorServerStatus_CyclicCode:
+	CASE Internal.Step OF
+		0:
+			Internal.EasyUaConnectionGetStatus(Execute := TRUE, ServerEndpointUrl := ServerEndpointUrl, pSessionConnectInfo := pSessionConnectInfo);
+			IF (Internal.EasyUaConnectionGetStatus.Busy = 0) THEN
+				IF (Internal.EasyUaConnectionGetStatus.Done = 1) THEN
+					StatusID:= 0;
+					ConnectionStatus := Internal.EasyUaConnectionGetStatus.ConnectionStatus;
+					ServerState := Internal.EasyUaConnectionGetStatus.ServerState;
+					ServiceLevel := Internal.EasyUaConnectionGetStatus.ServiceLevel;
+					Internal.Step := 1;
+				END_IF;
+				IF (Internal.EasyUaConnectionGetStatus.Error = 1) THEN
+					StatusID := Internal.EasyUaConnectionGetStatus.StatusID;
+//					ConnectionStatus := UACS_ConnectionError;
+//					ServerState := UASS_Unknown;
+//					ServiceLevel := 0;
+//					Internal.Step := 255;
+					ConnectionStatus := Internal.EasyUaConnectionGetStatus.ConnectionStatus;
+					ServerState := Internal.EasyUaConnectionGetStatus.ServerState;
+					ServiceLevel := Internal.EasyUaConnectionGetStatus.ServiceLevel;
+					Internal.Step := 1;
+				END_IF;
+				Internal.EasyUaConnectionGetStatus(Execute := FALSE);
+			END_IF;
+			
+		1:
+			Internal.TON_0.IN := TRUE;
+			IF Internal.TON_0.Q THEN
+				Internal.TON_0.IN := FALSE;
+				IF MonitoringTime = 0 THEN
+					Internal.MonitoringTime := T#10s;
+				ELSE
+					Internal.MonitoringTime := MonitoringTime;
+				END_IF;
+				Internal.Step := 0;
+			END_IF;
+	END_CASE;
+	Internal.TON_0(PT:=Internal.MonitoringTime);
+END_ACTION
+
+ACTION EasyUaMonitorServerStatus_SetError:
+	Active := FALSE;
+	Error := TRUE;			
+END_ACTION
+	
+ACTION EasyUaMonitorServerStatus_ResetInternal:
+	Internal.EnableOld := FALSE;
+	Internal.ParametersValid := FALSE;
+	Internal.Step := 0;
+	Internal.MonitoringTime := 0;
+	Internal.EasyUaConnectionGetStatus(Execute:=FALSE);
+	Internal.TON_0(IN:=FALSE);
+END_ACTION
+
+ACTION EasyUaMonitorServerStatus_ResetOutputs:
+	Active := FALSE;
+	Error := FALSE;
+	StatusID := 0;
+	ConnectionStatus := UACS_ConnectionError;
+	ServerState := UASS_Unknown;
+	ServiceLevel := 0;
+END_ACTION
+
+	

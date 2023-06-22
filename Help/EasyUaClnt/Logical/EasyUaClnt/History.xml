@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--History of Library-->
+<DocumentationStudio Version="1.3.0.0">
+  <Histories>
+    <History>
+      <Version>1/01/0</Version>
+      <Author>Javier Novella</Author>
+      <Date>12/09/2022</Date>
+      <Description>First help version</Description>
+    </History>
+    <History>
+      <Version>1/02/0</Version>
+      <Author>Javier Novella</Author>
+      <Date>02/12/2022</Date>
+      <Description>EasyUaSubscription and EasyUaSubscriptionList FUBs improved disabling performance.</Description>
+    </History>
+  </Histories>
+</DocumentationStudio>

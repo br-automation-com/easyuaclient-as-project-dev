@@ -1,0 +1,10 @@
+VAR
+	VarC : INT;
+	VarB : INT;
+	VarA : INT;
+	EasyUaReadBulk_0 : EasyUaReadBulk;
+	NodeIDs_0 : ARRAY[0..2] OF UANodeID;
+	Variables_0 : ARRAY[0..2] OF STRING[255];
+	NodeErrorIDs_0 : ARRAY[0..2] OF DWORD;
+	TimeStamps_0 : ARRAY[0..2] OF DATE_AND_TIME;
+END_VAR

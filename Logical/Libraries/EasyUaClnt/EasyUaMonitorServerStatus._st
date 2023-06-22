@@ -1,0 +1,18 @@
+FUNCTION_BLOCK EasyUaMonitorServerStatus 
+
+	IF Enable = TRUE THEN     
+		IF Internal.EnableOld = FALSE THEN 
+			EasyUaMonitorServerStatus_CheckParameters;
+		END_IF;
+
+		IF Internal.ParametersValid = TRUE THEN
+			EasyUaMonitorServerStatus_CyclicCode;
+		END_IF;
+		
+		Internal.EnableOld := Enable;		
+	ELSE
+		EasyUaMonitorServerStatus_ResetInternal;
+		EasyUaMonitorServerStatus_ResetOutputs;		
+	END_IF;
+	
+END_FUNCTION_BLOCK

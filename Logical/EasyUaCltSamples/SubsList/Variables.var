@@ -1,0 +1,11 @@
+VAR
+	VarC : INT;
+	VarB : INT;
+	VarA : INT;
+	EasyUaSubscriptionList_0 : EasyUaSubscriptionList;
+	NodeErrorIDs_0 : ARRAY[0..MAX_INDEX_NODELIST] OF DWORD;
+	TimeStamps_0 : ARRAY[0..MAX_INDEX_NODELIST] OF DATE_AND_TIME;
+	ValuesChange_0 : ARRAY[0..MAX_INDEX_MONITORLIST] OF BOOL;
+	RemainingValueCount_0 : ARRAY[0..MAX_INDEX_MONITORLIST] OF UINT;
+	NodeQualityIDs_0 : ARRAY[0..MAX_INDEX_MONITORLIST] OF DWORD;
+END_VAR

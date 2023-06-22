@@ -1,0 +1,11 @@
+VAR
+	TestStructA : EasyUaCltServerStructureType;
+	UaSrv_MethodOperate_0 : UaSrv_MethodOperate;
+	Step : INT;
+	VarResult : REAL;
+	VarA : REAL;
+	VarB : REAL;
+	VarX : INT;
+	VarY : INT;
+	VarZ : INT;
+END_VAR

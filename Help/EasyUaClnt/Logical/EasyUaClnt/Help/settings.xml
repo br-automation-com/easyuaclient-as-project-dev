@@ -1,0 +1,19 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<Settings>
+<TemplateLibraryHtml>C:\Users\novellaj\AppData\Roaming\BR_DocumentationStudio\Documentation Studio\Toolbox\HtmlTemplates\Library.html</TemplateLibraryHtml>
+<CSSFile>C:\Users\novellaj\AppData\Roaming\BR_DocumentationStudio\Documentation Studio\Toolbox\Css\styles_V1_3_0_0.css</CSSFile>
+<ExampleOrder>4</ExampleOrder>
+<GenerateExample>True</GenerateExample>
+<ExampleAlwaysLastOrder>True</ExampleAlwaysLastOrder>
+<ErrorConstantTag>_ERR_</ErrorConstantTag>
+<ShowAuthorInHelp>True</ShowAuthorInHelp>
+<ShowVARMemberInHelp>True</ShowVARMemberInHelp>
+<HelpConfig>C:\Users\novellaj\AppData\Roaming\BR_DocumentationStudio\Documentation Studio\Toolbox\ThemeConfigurations\Standard_Library_V1_3_0_0.xml</HelpConfig>
+<LastOpenedPageFile>C:\projects\BR\EasyUaClt_AsDevProject\Help\EasyUaClnt\Logical\_Base\Examples\Server\Preparing the OPC UA server.html</LastOpenedPageFile>
+<UseExtHelpConfigFile>False</UseExtHelpConfigFile>
+<UseExtCssFile>False</UseExtCssFile>
+<UseThemes>True</UseThemes>
+<Theme>C:\Users\novellaj\AppData\Roaming\BR_DocumentationStudio\Documentation Studio\Toolbox\Themes\Standard_Library_V1.3.0.0</Theme>
+<UseLocalThemes>False</UseLocalThemes>
+<BaseFolderInitialied>False</BaseFolderInitialied>
+</Settings>

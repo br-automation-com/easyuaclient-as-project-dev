@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="APC2100.Hardware.hw" LastWriteTime="07/14/2022 10:57:35" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="5APC2100_BY22_000" Type="5APC2100.BY22-000" X="108" Y="100" />
+    <Module Name="5ACCIF01.FPSC-000" Type="5ACCIF01.FPSC-000" X="104" Y="110" />
+  </Modules>
+  <Links />
+  <InfoElements />
+</BR.AS.HardwareTopology>

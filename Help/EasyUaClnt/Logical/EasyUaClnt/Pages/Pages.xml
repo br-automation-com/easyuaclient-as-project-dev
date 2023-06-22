@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Pages of Library Help-->
+<DocumentationStudio Version="1.3.0.0">
+  <Pages>
+    <Page Guid="ef52c04f-df0b-4fb1-a869-cbf669e7e13e" Name="Examples" Path="Logical/_Base/Examples/Examples.html" Description="Examples" Parent="Help Root" Order="3">
+      <Page Guid="dd475d8d-767c-487e-af07-89ba1d38055d" Name="Server" Path="Logical/_Base/Examples/Server/Server.html" Description="Server" Parent="" Order="0">
+        <Page Guid="1d4d2e40-0123-43d8-b071-12481f8d7b45" Name="Preparing the OPC UA server" Path="Logical/_Base/Examples/Server/Preparing the OPC UA server.html" Description="Preparing the OPC UA server" Parent="" Order="0" />
+      </Page>
+      <Page Guid="c4261cda-77a3-46d5-a2c0-577e076804ec" Name="Client" Path="Logical/_Base/Examples/Client/Client.html" Description="Client" Parent="" Order="0">
+        <Page Guid="b2c0ad1d-bc98-458c-970e-803a5649b703" Name="Reading an OPC UA node" Path="Logical/_Base/Examples/Client/Reading an OPC UA node.html" Description="Reading an OPC UA node" Parent="" Order="0" />
+        <Page Guid="6b0ff6c4-43f8-4190-bd8a-a12853a4f5aa" Name="Reading a list of OPC UA nodes" Path="Logical/_Base/Examples/Client/Reading a list of OPC UA nodes.html" Description="Reading a list of OPC UA nodes" Parent="" Order="0" />
+        <Page Guid="6c012771-8871-424c-af9b-b1bd83e79a32" Name="Reading a list of OPC UA nodes with improved performance" Path="Logical/_Base/Examples/Client/Reading a list of OPC UA nodes with improved performance.html" Description="Reading a list of OPC UA nodes with improved performance" Parent="" Order="0" />
+        <Page Guid="a4733f63-beca-45da-a2ff-fd190db61920" Name="Writing an OPC UA node" Path="Logical/_Base/Examples/Client/Writing an OPC UA node.html" Description="Writing an OPC UA node" Parent="" Order="0" />
+        <Page Guid="c36463d6-40be-4666-8188-8507b5c95b6b" Name="Writing a list of OPC UA nodes" Path="Logical/_Base/Examples/Client/Writing a list of OPC UA nodes.html" Description="Writing a list of OPC UA nodes" Parent="" Order="0" />
+        <Page Guid="fde260d2-a21a-4e54-a4d6-ce7b26a40786" Name="Writing a list of OPC UA nodes with improved performance" Path="Logical/_Base/Examples/Client/Writing a list of OPC UA nodes with improved performance.html" Description="Writing a list of OPC UA nodes with improved performance" Parent="" Order="0" />
+        <Page Guid="1a8a8749-5d64-4ba6-b9f8-b24fcebf8f1e" Name="Subscribing to an OPC UA node" Path="Logical/_Base/Examples/Client/Subscribing to an OPC UA node.html" Description="Subscribing to an OPC UA node" Parent="" Order="0" />
+        <Page Guid="38a574d3-9012-414a-aa47-e2fff85dbdc8" Name="Subscribing to a list of OPC UA nodes" Path="Logical/_Base/Examples/Client/Subscribing to a list of OPC UA nodes.html" Description="Subscribing to a list of OPC UA nodes" Parent="" Order="0" />
+        <Page Guid="ea348ea4-e1e1-4990-a814-571ebf5d92c7" Name="Calling an OPC UA method" Path="Logical/_Base/Examples/Client/Calling an OPC UA method.html" Description="Calling an OPC UA method" Parent="" Order="0" />
+        <Page Guid="7934dbb3-0a1a-4c0f-aa42-cc302a99cc96" Name="Reading the OPC UA server conecction status" Path="Logical/_Base/Examples/Client/Reading the OPC UA server conecction status.html" Description="Reading the OPC UA server conecction status" Parent="" Order="0" />
+      </Page>
+    </Page>
+  </Pages>
+</DocumentationStudio>

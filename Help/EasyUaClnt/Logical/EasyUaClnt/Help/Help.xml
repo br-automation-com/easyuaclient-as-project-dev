@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Help Configurations-->
+<DocumentationStudio Version="1.3.0.0">
+  <Help>
+    <Configuration>
+      <Name>CHM</Name>
+      <Description>CHM Help</Description>
+      <Type>.chtml</Type>
+      <OutputPath></OutputPath>
+    </Configuration>
+  </Help>
+  <Settings>
+    <UseThemes>true</UseThemes>
+    <UseLocalThemes>false</UseLocalThemes>
+    <Theme>Standard_Library_Extended_V1.3.0.0</Theme>
+    <UseLocalCssFile>false</UseLocalCssFile>
+    <UseLocalHelpConfigFile>false</UseLocalHelpConfigFile>
+    <HelpConfig>Standard_Library_V1_3_0_0.xml</HelpConfig>
+    <CSSFile>styles_V1_3_0_0.css</CSSFile>
+  </Settings>
+</DocumentationStudio>

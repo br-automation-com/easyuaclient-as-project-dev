@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   <title>Preparing the OPC UA server</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Preparing the OPC UA server</title>
+		<meta name="ORDER" content="0">
+		<link rel="StyleSheet" href="styles.css">
+	</head>
+	<body>
+<h1>Preparing the OPC UA server</h1>
+    <p>Program examples are developed on ARsim, B&amp;R&apos;s simulation PLC. </p>
+    <h2>OPC UA configuration</h2>
+    <p>The OPC UA server is enabled in the PLC configuration.</p>
+	<p><img alt="" src="_img/arsimconfig.png" /></p>
+    <p>Parameter &quot;Activate OPC UA server&quot; is set to &quot;On&quot;, and the following parameters are modified:</p>
+    <ul>
+		<li>Network Settings / Port number = &quot;4841&quot;</li>
+        <li>Security policies / No security = &quot;Allow&quot; (the program examples work without encryption)</li>
+        <li>Information models / PV = &#39;2.00&#39;</li>
+    </ul>
+	<p><img alt="" src="_img/opcuaconfig.png" /></p>
+	
+		<h3>Adding library dependencies</h3>
+	
+	<p>
+        As long as AsOpcUas functions has been used in this task this library must be imported to the project from Toolbox -> BuR Libraries.
+    </p>
+	<p><img alt="" src="_img/asopcuaslibraryimport.png" /></p>
+	
+    <h3>Sample program on the server</h3>
+    <p>
+        Program example &quot;ServerTask&quot; runs on the PLC with a few variable that can then be used in the client programs. It can be saved using the following link. Then it has to be imported in server Automation Studio project.
+    </p>
+	
+	<p><a href="_zip/ServerTask.zip" target="_self"/>Server sample task</a></p>
+	
+    <h3>Configuring variables</h3>
+    <p>
+        The variables in sample program &quot;ServerTask&quot; must be configured in order for them to be set up as OPC UA nodes on the OPC UA server:
+    </p>	
+	<p><img alt="" src="_img/opcuamap.png" /></p>
+	</body>
+</html>

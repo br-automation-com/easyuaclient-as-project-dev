@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">ServerTask</Object>
+    <Object Type="Program" Language="IEC">Read</Object>
+    <Object Type="Program" Language="IEC">Write</Object>
+    <Object Type="Program" Language="IEC">ReadList</Object>
+    <Object Type="Program" Language="IEC">WriteList</Object>
+    <Object Type="Program" Language="IEC">ReadBulk</Object>
+    <Object Type="Program" Language="IEC">WriteBulk</Object>
+    <Object Type="Program" Language="IEC">Subs</Object>
+    <Object Type="Program" Language="IEC">SubsList</Object>
+    <Object Type="Program" Language="IEC">MethodCall</Object>
+    <Object Type="Program" Language="IEC">ConGetStat</Object>
+  </Objects>
+</Package>

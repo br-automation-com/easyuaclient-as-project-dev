@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   <title>Writing a list of OPC UA nodes</title>
+	<title>Writing a list of OPC UA nodes</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Writing a list of OPC UA nodes</title>
+		<meta name="ORDER" content="0">
+		<link rel="StyleSheet" href="styles.css">
+	</head>
+	<body>
+<h1>Preparing the OPC UA client</h1>
+    <p>Program examples are developed on ARsim, B&amp;R&apos;s simulation PLC. </p>
+    <h2>OPC UA configuration</h2>
+    <p>The OPC UA system is enabled in the PLC configuration.</p>
+	<p><img alt="" src="_img/arsimconfig.png" /></p>
+    <p>Parameter &quot;Activate OPC UA system&quot; is set to &quot;On&quot;, and the following parameters are modified:</p>
+	<p><img alt="" src="_img/opcuasystem.png" /></p>
+	<h3>Adding EasyUaClt library</h3>
+	<p>In order to run the sample EasyUaClt has to be imported using Toolbox -> Existing Library</p>
+	<p><img alt="" src="_img/importeasyuacltlibrary.png" /></p>
+    <h3>Sample program on the client</h3>
+    <p>
+        Program example &quot;WriteList&quot; runs on the PLC implementing the FUB EasyUaWriteList. It can be saved using the following link. Then it has to be imported in client Automation Studio project.
+    </p>
+	
+	<p><a href="_zip/WriteList.zip" target="_self"/>WriteList sample task</a></p>
+	
+    <h3>Writing a list of OPC UA nodes</h3>
+    <p>
+        The OPC UA server nodes to write are VarX, VarY and VarZ and the value will be taken from the local variable VarA, VarB and VarC. The code in the server side regarding VarX, VarY and VarZ is:
+    </p>
+	
+	<pre class="SourceCode">
+		<font color="#0000FF" name="Courier" new="">PROGRAM<font color="#008080">&nbsp;</font>_CYCLIC
+		<font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;VarX</font><font color="#008080">&nbsp;</font><font color="#000000">:=</font><font color="#008080">&nbsp;</font><font color="#000000">VarX</font><font color="#008080">&nbsp;</font><font color="#000000">+1;
+		<font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;VarY</font><font color="#008080">&nbsp;</font><font color="#000000">:=</font><font color="#008080">&nbsp;</font><font color="#000000">VarY</font><font color="#008080">&nbsp;</font><font color="#000000">+1;
+		<font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;VarZ</font><font color="#008080">&nbsp;</font><font color="#000000">:=</font><font color="#008080">&nbsp;</font><font color="#000000">VarZ</font><font color="#008080">&nbsp;</font><font color="#000000">+1;
+		<font color="#0000FF" name="Courier" new="">END_PROGRAM</font>
+	</pre>
+	
+	<p>
+        Writing the nodes can be done executing the FUB EasyUaWriteList_0 by setting EasyUaWriteList_0.Execute to TRUE. This can be done from the Watch window of the WriteList task.
+    </p>
+	
+	<p><img alt="" src="_img/writelistexecution.png" /></p>
+	
+	</body>
+</html>

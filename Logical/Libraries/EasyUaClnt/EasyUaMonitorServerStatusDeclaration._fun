@@ -1,0 +1,19 @@
+{REDUND_UNREPLICABLE} FUNCTION_BLOCK EasyUaMonitorServerStatus (*Monitor for the connection information*)
+	VAR_INPUT
+		Enable : {REDUND_UNREPLICABLE} BOOL; (*Enable the function block*) (* *) (*#PAR*)
+		ServerEndpointUrl : {REDUND_UNREPLICABLE} STRING[255]; (*Server endpoint URL specified in the syntax opc.tcp://<IP address>:<Port>*) (* *) (*#PAR*)
+		pSessionConnectInfo : {REDUND_UNREPLICABLE} UDINT; (*Reference to structure UASessionConnectInfo *) (* *) (*#PAR#OPT*)
+		MonitoringTime : {REDUND_UNREPLICABLE} TIME; (*Time monitoring. If not specified the time used is 10 seconds.*) (* *) (*#PAR#OPT*)
+	END_VAR
+	VAR_OUTPUT
+		Active : {REDUND_UNREPLICABLE} BOOL; (*Function block is active*) (* *) (*#PAR*)
+		Error : {REDUND_UNREPLICABLE} BOOL; (*Indicates an error*) (* *) (*#PAR*)
+		StatusID : {REDUND_UNREPLICABLE} DWORD; (*Status information*) (* *) (*#PAR*)
+		ConnectionStatus : {REDUND_UNREPLICABLE} UAConnectionStatus; (*Status of the connection, see UAConnectionStatus. Outputs "ServerState" and "ServiceLevel" are only valid if ConnectionStatus = UACS_Connected.*) (* *) (*#PAR*)
+		ServerState : {REDUND_UNREPLICABLE} UAServerState; (*Status of the server, see UAServerState.*) (* *) (*#PAR*)
+		ServiceLevel : {REDUND_UNREPLICABLE} BYTE; (*ServiceLevel" describes the server's ability to provide the client with data.*) (* *) (*#PAR*)
+	END_VAR
+	VAR
+		Internal : {REDUND_UNREPLICABLE} EasyUaMonSrvStatusInternalType; (*Data for internal use*) (* *) (*#OMIT*)
+	END_VAR 
+END_FUNCTION_BLOCK

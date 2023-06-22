@@ -1,0 +1,3 @@
+VAR
+	EasyUaConnectionGetStatus_0 : EasyUaConnectionGetStatus;
+END_VAR

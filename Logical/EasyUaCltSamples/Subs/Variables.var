@@ -1,0 +1,4 @@
+VAR
+	EasyUaSubscription_0 : EasyUaSubscription;
+	VarA : INT;
+END_VAR

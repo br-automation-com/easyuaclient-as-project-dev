@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="1.02.0" SubType="IEC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Exported functions and function blocks">EasyUaClnt.fun</File>
+    <File>EasyUaMonitorServerStatus._st</File>
+    <File>EasyUaMonitorServerStatusAction._st</File>
+    <File>EasyUaMonitorServerStatusDeclaration._fun</File>
+    <File>EasyUaConnectionGetStatus.st</File>
+    <File>EasyUaConnectionGetStatusAction.st</File>
+    <File>EasyUaRead.st</File>
+    <File>EasyUaReadAction.st</File>
+    <File>EasyUaReadBulk.st</File>
+    <File>EasyUaReadBulkAction.st</File>
+    <File>EasyUaReadList.st</File>
+    <File>EasyUaReadListAction.st</File>
+    <File>EasyUaWrite.st</File>
+    <File>EasyUaWriteAction.st</File>
+    <File>EasyUaWriteList.st</File>
+    <File>EasyUaWriteListAction.st</File>
+    <File>EasyUaWriteBulk.st</File>
+    <File>EasyUaWriteBulkAction.st</File>
+    <File>EasyUaSubscription.st</File>
+    <File>EasyUaSubscriptionAction.st</File>
+    <File>EasyUaSubscriptionList.st</File>
+    <File>EasyUaSubscriptionListAction.st</File>
+    <File>EasyUaMethodCall.st</File>
+    <File>EasyUaMethodCallAction.st</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="AsOpcUac" />
+    <Dependency ObjectName="standard" />
+    <Dependency ObjectName="AsBrStr" />
+  </Dependencies>
+</Library>

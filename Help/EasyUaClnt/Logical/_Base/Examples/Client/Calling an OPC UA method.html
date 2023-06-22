@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   <title>Calling an OPC UA method</title>
+	<title>Calling an OPC UA method</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Calling an OPC UA method</title>
+		<meta name="ORDER" content="0">
+		<link rel="StyleSheet" href="styles.css">
+	</head>
+	<body>
+<h1>Preparing the OPC UA client</h1>
+    <p>Program examples are developed on ARsim, B&amp;R&apos;s simulation PLC. </p>
+    <h2>OPC UA configuration</h2>
+    <p>The OPC UA system is enabled in the PLC configuration.</p>
+	<p><img alt="" src="_img/arsimconfig.png" /></p>
+    <p>Parameter &quot;Activate OPC UA system&quot; is set to &quot;On&quot;, and the following parameters are modified:</p>
+	<p><img alt="" src="_img/opcuasystem.png" /></p>
+	<h3>Adding EasyUaClt library</h3>
+	<p>In order to run the sample EasyUaClt has to be imported using Toolbox -> Existing Library</p>
+	<p><img alt="" src="_img/importeasyuacltlibrary.png" /></p>
+    <h3>Sample program on the client</h3>
+    <p>
+        Program example &quot;MethodCall&quot; runs on the PLC implementing the FUB EasyUaMethodCall. It can be saved using the following link. Then it has to be imported in client Automation Studio project.
+    </p>
+	
+	<p><a href="_zip/MethodCall.zip" target="_self"/>MethodCall sample task</a></p>
+	
+    <h3>Calling an OPC UA method</h3>
+    <p>
+        The OPC UA server implements the method Multiply. Call function "::MethodTask:Multiply" on the OPC UA server, specify parameters "VarA" and "VarB" and save the result in "VarC". The code at the server side regarding this operation is:
+    </p>
+	
+	<pre class="SourceCode">
+		<font color="#0000FF" name="Courier" new="">PROGRAM<font color="#008080">&nbsp;</font>_CYCLIC
+		<font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;CASE Step OF
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0:
+			UaSrv_MethodOperate_0.Action  := UaMoa_CheckIsCalled; 
+			UaSrv_MethodOperate_0.MethodName := 'Multiply';
+			UaSrv_MethodOperate_0.Execute := TRUE;
+			Step := 1;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:
+			UaSrv_MethodOperate_0();
+			IF UaSrv_MethodOperate_0.Busy THEN
+				UaSrv_MethodOperate_0.Execute := FALSE;
+			ELSE
+				IF UaSrv_MethodOperate_0.Done THEN
+					IF UaSrv_MethodOperate_0.IsCalled THEN
+						Step := 2;
+					END_IF
+					UaSrv_MethodOperate_0.Execute := TRUE;
+				END_IF
+				IF UaSrv_MethodOperate_0.Error THEN
+					Step := 0;
+				END_IF
+			END_IF
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:
+			VarResult := VarA * VarB;
+			Step := 3;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:
+			UaSrv_MethodOperate_0.Action  := UaMoa_Finished;
+			UaSrv_MethodOperate_0.MethodName := 'Multiply';
+			UaSrv_MethodOperate_0.Execute := TRUE;
+			Step := 4;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:
+			UaSrv_MethodOperate_0();
+			IF UaSrv_MethodOperate_0.Busy THEN
+				UaSrv_MethodOperate_0.Execute := FALSE;
+			ELSE
+				IF UaSrv_MethodOperate_0.Done THEN
+					Step := 0;
+				END_IF
+				IF UaSrv_MethodOperate_0.Error THEN
+					Step := 0;
+				END_IF
+			END_IF
+		&nbsp;&nbsp;&nbsp;&nbsp;END_CASE;</font>
+		<font color="#0000FF" name="Courier" new="">END_PROGRAM</font><font color="#000000">
+	</pre>
+	
+	<p>
+        Calling the method can be done executing the FUB EasyUaMethodCall_0 by setting EasyUaMethodCall_0.Execute to TRUE. This can be done from the Watch window of the MethodCall task.
+    </p>
+	
+	<p><img alt="" src="_img/methodcallexecution.png" /></p>
+	
+	</body>
+</html>
