@@ -125,7 +125,7 @@ ACTION EasyUaWrite_CyclicCode:
 			Internal.UA_NodeReleaseHandle_0(Execute := TRUE, ConnectionHdl := Internal.ConnectionHdl, NodeHdl := Internal.NodeHdl, Timeout := EASYUA_EXECUTE_TIMEOUT);
 			IF (Internal.UA_NodeReleaseHandle_0.Busy = 0) THEN
 				Internal.NodeHdl := 0;
-				Internal.Step := 255;
+				Internal.Step := 254;
 				Internal.UA_NodeReleaseHandle_0(Execute := FALSE);
 			END_IF;
 		254:

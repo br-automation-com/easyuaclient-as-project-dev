@@ -123,7 +123,7 @@ ACTION EasyUaMethodCall_CyclicCode:
 			Internal.UA_MethodReleaseHandle_0(Execute := TRUE, ConnectionHdl := Internal.ConnectionHdl, MethodHdl := Internal.MethodHdl, Timeout := EASYUA_EXECUTE_TIMEOUT);
 			IF (Internal.UA_MethodReleaseHandle_0.Busy = 0) THEN
 				Internal.MethodHdl := 0;
-				Internal.Step := 255;
+				Internal.Step := 254;
 				Internal.UA_MethodReleaseHandle_0(Execute := FALSE);
 			END_IF;
 		254:

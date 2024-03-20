@@ -148,7 +148,7 @@ ACTION EasyUaReadList_CyclicCode:
 			Internal.UA_NodeReleaseHandleList_0(Execute := TRUE, ConnectionHdl := Internal.ConnectionHdl, NodeHdls := Internal.NodeHdls, Timeout := EASYUA_EXECUTE_TIMEOUT);
 			IF (Internal.UA_NodeReleaseHandleList_0.Busy = 0) THEN
 				brsmemset(ADR(Internal.NodeHdls),0,SIZEOF(Internal.NodeHdls));
-				Internal.Step := 255;
+				Internal.Step := 254;
 				Internal.UA_NodeReleaseHandleList_0(Execute := FALSE);
 			END_IF;
 		254:
