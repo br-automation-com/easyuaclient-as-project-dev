@@ -22,7 +22,7 @@ PROGRAM _INIT
 	EasyUaSubscriptionList_0.Variables[2] := '::SubsList:VarC';
 	
 	EasyUaSubscriptionList_0.PublishingInterval := T#500ms;
-	EasyUaSubscriptionList_0.Enable := TRUE;
+	//EasyUaSubscriptionList_0.Enable := TRUE;
 END_PROGRAM
 
 PROGRAM _CYCLIC

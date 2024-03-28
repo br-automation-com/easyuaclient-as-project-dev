@@ -7,7 +7,7 @@ PROGRAM _INIT
 	EasyUaSubscription_0.NodeID.IdentifierType := UAIdentifierType_String;
 	EasyUaSubscription_0.Variable := '::Subs:VarA';
 	EasyUaSubscription_0.PublishingInterval := T#500ms;
-	EasyUaSubscription_0.Enable := TRUE;
+	//EasyUaSubscription_0.Enable := TRUE;
 END_PROGRAM
 
 PROGRAM _CYCLIC
