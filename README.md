@@ -6,7 +6,9 @@ The EasyUaClnt is a simplicity wrapper library based on AsOpcUac. Anyone who has
 **Minimum versions**<br>
 Minimum version requirements are:
 * Automation Studio: 4.2
-* Automation Runtime: C4.25
+* Automation Runtime:
+* For SG4 Intel CPUs: J4.25
+* For SG4 ARM CPUs: A4.34
 
 **Functionalities**<br>
 The functionalities of this library exhibit no constraints when compared with the AsOpcUac library ones. It allows the user to perform the following actions in OPC UA as a client in a easier way:
