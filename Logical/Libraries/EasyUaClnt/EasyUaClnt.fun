@@ -122,14 +122,14 @@ END_FUNCTION_BLOCK
 	VAR_INPUT
 		Enable : {REDUND_UNREPLICABLE} BOOL; (*Enable the function block*) (* *) (*#PAR*)
 		ServerEndpointUrl : {REDUND_UNREPLICABLE} STRING[255]; (*Server endpoint URL specified in the syntax opc.tcp://IP address:Port*) (* *) (*#PAR*)
-		pSessionConnectInfo : {REDUND_UNREPLICABLE} UASessionConnectInfo; (*Reference to structure UASessionConnectInfo *) (* *) (*#PAR#OPT*)
+		pSessionConnectInfo : REFERENCE TO UASessionConnectInfo; (*Reference to structure UASessionConnectInfo *) (* *) (*#PAR#OPT*)
 		NamespaceUri : {REDUND_UNREPLICABLE} STRING[255]; (*Specifies the namespace URI. Example: "urn:B&R/pv/". If not specified the NodeID.NamespaceIndex is used*) (* *) (*#PAR#OPT*)
 		NodeID : {REDUND_UNREPLICABLE} UANodeID; (*NodeID, identification of the node. For information about the structure, see UANodeID in AsOpcUac Automation Studio Help. *) (* *) (*#PAR*)
-		pNodeAddInfo : {REDUND_UNREPLICABLE} UANodeAdditionalInfo; (*Additional parameters for specifying the node.For information about the structure, see UANodeAdditionalInfo.*) (* *) (*#PAR#OPT*)
+		pNodeAddInfo : REFERENCE TO UANodeAdditionalInfo; (*Additional parameters for specifying the node.For information about the structure, see UANodeAdditionalInfo.*) (* *) (*#PAR#OPT*)
 		Variable : {REDUND_UNREPLICABLE} STRING[255]; (* Name of the variable on the controller in the syntax Application module::Task:Variable.Element*) (* *) (*#PAR*)
 		PublishingInterval : {REDUND_UNREPLICABLE} TIME; (*Interval at which data should be published to the client. Since the server does not have to accept every desired interval, the interval actually used by the server is returned on the output after the call. If not specified 10 seconds is used*) (* *) (*#PAR#OPT*)
 		Priority : {REDUND_UNREPLICABLE} BYTE; (*Specifies the priority of the subscription on the server (with respect to other subscriptions from the same client)*) (* *) (*#PAR#OPT*)
-		pMonitoringSettings : {REDUND_UNREPLICABLE} UAMonitoringSettings; (*Additional parameters for specifying monitoring. See UAMonitoringSettings in AsOpcUac Automation Studio Help*) (* *) (*#PAR#OPT*)
+		pMonitoringSettings : REFERENCE TO UAMonitoringSettings; (*Additional parameters for specifying monitoring. See UAMonitoringSettings in AsOpcUac Automation Studio Help*) (* *) (*#PAR#OPT*)
 	END_VAR
 	VAR_OUTPUT
 		Active : {REDUND_UNREPLICABLE} BOOL; (*Function block is active*) (* *) (*#PAR*)

@@ -5,20 +5,26 @@
     <History>
       <Version>1/01/0</Version>
       <Author>Javier Novella</Author>
-      <Date>12/09/2022</Date>
+      <Date>09/12/2022</Date>
       <Description>First help version</Description>
     </History>
     <History>
       <Version>1/02/0</Version>
       <Author>Javier Novella</Author>
-      <Date>02/12/2022</Date>
+      <Date>12/02/2022</Date>
       <Description>EasyUaSubscription and EasyUaSubscriptionList FUBs improved disabling performance.</Description>
     </History>
     <History>
       <Version>1/02/1</Version>
       <Author>Javier Novella</Author>
-      <Date>28/03/2024</Date>
+      <Date />
       <Description>Improved disconnection procedure for EasyUaWrite, EasyUaWriteList, EasyUaRead, EasyUaReadList, EasyUaMethodCall. Improved backwards compatibility with old AR. Updated minimum versions.</Description>
+    </History>
+    <History>
+      <Version>1/02/2</Version>
+      <Author>Javier Novella</Author>
+      <Date>06/06/2024</Date>
+      <Description>Improved EasyUaSubscription FUB inputs.</Description>
     </History>
   </Histories>
 </DocumentationStudio>
